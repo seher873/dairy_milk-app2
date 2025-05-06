@@ -1,0 +1,70 @@
+🌟 Malik Dairy Application - Instructions 🌟
+
+This is an app for tracking milk entries and generating daily and monthly reports.
+Please follow the steps below to use the app effectively:
+
+1. **Password Protection:**
+   - Upon opening the app, you will be asked to input the correct password.
+   - Default Password: `obob` (you can change it as per your preference).
+
+2. **Available Features:**
+   - **Home:** Displays the dashboard with today's milk tracking summary.
+   - **Add Entry:** Add a new entry for customer milk tracking (including start/end dates, milk amount, rates, and payment details).
+   - **Daily Report:** View milk tracking data for a specific day (select the date from the calendar).
+   - **Monthly Report:** Generate a milk tracking report for any given month.
+
+3. **Data Columns in Reports:**
+   - **Customer Name**: Name of the milk customer.
+   - **Start Date** & **End Date**: Date range for the milk entry.
+   - **Morning Mound** & **Evening Mound**: Amount of milk in Mound (Morning and Evening).
+   - **Morning Sair** & **Evening Sair**: Sair (Surcharge) applied for morning and evening entries.
+   - **Morning Rate** & **Evening Rate**: Rate per Mound for morning and evening milk.
+   - **Rent**: Rent charged.
+   - **Commission**: Any commission applied.
+   - **Bandi**: Bandi (another possible charge).
+   - **Paid Amount**: The amount paid by the customer for the entry.
+
+4. **Reports:**
+   - **Daily Report**: Displays the total milk quantity and average mandi rate for the selected day.
+   - **Monthly Report**: Provides a detailed monthly summary including milk amounts and prices.
+   - **Download PDF**: Both daily and monthly reports have an option to download them in PDF format.
+
+5. **PDF Generation:**
+   - PDF reports are generated for daily and monthly summaries.
+   - The reports include a table with customer entries and totals.
+
+6. **Database Structure:**
+   - The application uses an SQLite database (`milk_data.db`).
+   - The database table `entries` stores the following columns:
+     - id (INTEGER PRIMARY KEY)
+     - customer_name (TEXT)
+     - date_start (TEXT)
+     - date_end (TEXT)
+     - morning_mound (REAL)
+     - morning_sair (INTEGER)
+     - morning_rate (REAL)
+     - evening_mound (REAL)
+     - evening_sair (INTEGER)
+     - evening_rate (REAL)
+     - rent (REAL)
+     - commission (REAL)
+     - bandi (REAL)
+     - paid_amount (REAL)
+
+7. **Error Handling:**
+   - If any errors occur (database connection or entry issue), appropriate error messages will be shown on the app.
+
+8. **How to Use the App:**
+   - Start by entering the correct password.
+   - Add customer entries under "Add Entry" using the form provided.
+   - For daily and monthly reports, select the respective options from the sidebar to view data.
+
+9. **Getting Started:**
+   - Install dependencies using:
+     - `pip install streamlit fpdf pandas sqlite3`
+   - Run the app using:
+     - `streamlit run milk_dairy_app.py`
+     
+We hope this app helps you keep track of milk entries and payments efficiently!
+
+Thank you for using Malik Dairy App 🍼
